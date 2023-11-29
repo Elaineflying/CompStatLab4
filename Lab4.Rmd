@@ -121,7 +121,7 @@ According to the first 20 chain values, it can see there is also a very small bu
 
 ### c
 
-```{r, metropolis_hastingsc, echo = FALSE}
+```{r, metropolis_hastings3, echo = FALSE}
 # Metropolis hastings method when proposal distribution is normal function
 metropolis_hastings_normal <- function(n) {
   set.seed(123)
@@ -166,7 +166,7 @@ According to the first 20 chain values, it can see there is also a very small bu
 
 ### d
 
-```{r, metropolis_hastingsd, echo = FALSE}
+```{r, metropolis_hastings4, echo = FALSE}
 results_df <- data.frame(proposal_function=c("log-normal", "chi-square", "normal"),
                          acceptance_rate=c(samples1$acceptance_rate, samples2$acceptance_rate, samples3$acceptance_rate),
                          mean=c(mean(samples1$chain), mean(samples2$chain), mean(samples3$chain)))
@@ -180,7 +180,7 @@ From above comparison among three different proposal functions, it can be seen t
 
 Please see below R compute results.
 
-```{r, metropolis_hastingse, echo = FALSE}
+```{r, metropolis_hastings5, echo = FALSE}
 
 mean_df <- data.frame(proposal_function=c("log-normal", "chi-square", "normal"),
                          mean=c(mean(samples1$chain), mean(samples2$chain), mean(samples3$chain)))
@@ -198,7 +198,7 @@ In this case, the shape parameter $k$ is 6 (since the power of x is 5+1) and the
 This actual integral value is quite close to the mean values when using three different proposal distributions. 
 
 See Appendix.
-```{r, metropolis_hastingsf, echo = FALSE}
+```{r, metropolis_hastings6, echo = FALSE}
 # Define the function with scaling factor
 # integral of function from 0 to infinity should be 6
 # c*120=6 ==> c=0.05
